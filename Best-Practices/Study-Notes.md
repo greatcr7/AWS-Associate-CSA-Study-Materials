@@ -55,6 +55,13 @@ The best practices apply to both migration of existing applications and design o
 ### Infrastructure as Code
 
 ## Automation
+- AWS Elastic Beanstalk
+- Amazon EC2 Auto Recovery
+- Auto Scaling
+- Amazon CloudWatch Alarms
+- Amazon CloudWatch Events
+- AWS OpsWorks Lifecycle Events
+- AWS Lambda Scheduled events
 
 
 ## Loose Coupling 
@@ -74,18 +81,25 @@ The best practices apply to both migration of existing applications and design o
 ## Databases
 
 ### Relational Databases
+*Amazon Relational Database Service (Amazon RDS)*
+
 - Scalability
 - High Availability
 - Anti-Patterns
 
 ### NoSQL Databases
+*Amazon DynamoDB*
 - Scalability
 - High Availability
 - Anti-Patterns
 
 ### Data Warehouse
+Specialized type of relational database.
+*Amazon Redshift*
 - Scalability
+
 - High Availability
+
 - Anti-Patterns
 
 ### Search
@@ -94,6 +108,10 @@ The best practices apply to both migration of existing applications and design o
 
 ## Removing Single Points of Failure
 ### Introducing Redundancy
+Having multiple resources for the same task can remove single points of failure. 
+There are two modes: standby or active mode.
+- Standby Redundancy: failover
+- Active Redundancy: requests are distributed to multiple redundant compute resources. Achieves better utilization and affect a smaller population.
 ### Detect Failure
 ### Durable Data Storage
 ### Automated Multi-Data Center Resilience
